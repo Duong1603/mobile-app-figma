@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-
 const Banner = () =>
 {
     return (
@@ -12,8 +11,9 @@ const Banner = () =>
             <View>
                 <Image style={styles.imageBig} source={require('../assets/images/hinh1.jpg')} />
                 <View style={styles.textOnImage}>
-                    <Text>Hi every</Text>
-                    <Text>Welcome to Store.</Text>
+                    <Text style={{ color: 'red', fontSize: 30 }}>Hi every {`\n`}
+                        Welcome to Store.
+                    </Text>
                 </View>
             </View>
         </View>
@@ -21,6 +21,9 @@ const Banner = () =>
 }
 
 const styles = StyleSheet.create({
+    titleTopBanner: {
+        fontSize: 30,
+    },
     topBanner: {
         justifyContent: "center",
         textAlign: "center",
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
         color: "#1987FB",
         fontWeight: "700",
     },
+
 });
 
 export default Banner;
