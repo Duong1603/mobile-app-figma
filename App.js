@@ -1,10 +1,11 @@
 
 import React from 'react';
-import Homepage from './components/Homepage';
+import Banner from './ScreenA/Banner';
+// import Homepage from './components/Homepage';
 const App = () =>
 {
 	return (
-		<Homepage />
+		<Banner />
 	);
 }
 export default App;
