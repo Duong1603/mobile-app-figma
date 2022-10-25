@@ -13,7 +13,7 @@ const Item = ({ name, image }) =>
 export default function CardCreateCard()
 {
 
-    const countries = [
+    const allpr = [
         {
             id: '1',
             name: 'United States',
@@ -62,14 +62,13 @@ export default function CardCreateCard()
     );
 
     return (
-        <SafeAreaView>
-            <FlatList style={styles.cards}
+        <View style={styles.cards}>
+            <FlatList style={styles.card}
                 numColumns={2}
-                data={countries}
+                data={allpr}
                 renderItem={renderItem}
             />
-        </SafeAreaView>
-
+        </View>
     );
 }
 const styles = StyleSheet.create({
@@ -79,10 +78,12 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         shadowColor: '#000',
         shadowRadius: 2,
+        marginHorizontal: 10,
+        marginVertical: 8,
     },
     imageCard: {
-        width: 100,
-        height: 100,
+        width: 150,
+        height: 150,
         marginBottom: 20,
         borderRadius: 20,
     },
@@ -96,5 +97,9 @@ const styles = StyleSheet.create({
     },
     scrollView: {
         marginHorizontal: 20,
-    }
+    },
+    cards: {
+        alignItems: 'center',
+    },
+
 });

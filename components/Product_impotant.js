@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Card_product from './Card_product';
 import All_product from './All_product';
 
@@ -12,9 +12,9 @@ const Product_impotant = () =>
                 <Card_product />
             </View>
             <Text style={styles.title_product_ip}>All product</Text>
-            <View>
+            <ScrollView>
                 <All_product />
-            </View>
+            </ScrollView>
         </View>
     );
 }
